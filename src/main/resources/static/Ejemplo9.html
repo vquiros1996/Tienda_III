@@ -1,0 +1,50 @@
+
+<html>
+    <head>
+        <title>Tienda en Linea</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+         <!--AGREGO REFERENCIA DE HOJA DE ESTILO EN EL BLOQUE HEAD-->
+        <link href="css/Estilos.css" rel="stylesheet" type="text/css"/>
+        
+        
+    </head>
+    <body>
+        <!--el h1 es para titulos, solo deberia haber un h1 por pag-->
+        <a name = "arriba"></a>
+        <div style = "text-align: center;" id="encabezado">
+            <h1> Ejemplo 9</h1>
+            <p> Bienvenidos al curso de Web y Patrones</p>
+
+        </div>
+        <!--ENLACES LOCALES NAVEGACION ENTRE PAGS-->
+        <a href="Ejemplo8.html"> Ir Atras  </a>
+        <br>
+        <a href="index.html"> Ir Adelante  </a>
+        <br>
+        <br>
+
+        <!--EJEMPLO DE FORMULARIOS
+        GET , ENVIA DATOS EN URL Y POST LOS ENVIA COMO PARTE DEL BODY-->
+
+
+        <form action="#" method="POST">
+            <label> Nombre: </label>
+
+            <!--El ID nunca se repite el name si-->
+            <input type="text" name="Nombre" id="Nombre" placeholder="Digite su nombre" size="50"/>
+            <br>
+            <input type="email" name="Correo" id="Correo" placeholder="Digite su correo" />
+            <br>
+            <input type="password" name="Password" id="Password"/>
+            <br>
+            
+             <!--Esubmit se envia a una accion que le especifiquemos , POST O GET-->
+            <input type="submit" value="Enviar"/>
+
+        </form>
+
+
+    </body>
+</html>

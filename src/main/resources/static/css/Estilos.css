@@ -1,0 +1,37 @@
+
+/* 
+    Created on : Oct 3, 2023, 2:16:49 PM
+    Author     : Vivian
+*/
+
+/* 
+Los selectores nos dicen a que elementos se van asignar
+*/
+
+/* 
+ESTE SE LE APLICO AL EJEMPLO 9
+*/
+#encabezado {
+    color: blueviolet;
+    font-weight: bold;
+}
+
+
+/* 
+ESTE SE LE APLICO AL EJEMPLO 7 EN LOS PARRAFOS
+SELECTOR DE CLASE
+*/
+.ParrafosCentrados
+{
+
+    text-align: center;
+    font-weight: bold;
+    color:  brown;
+
+
+}
+
+.textoVerde
+{
+    color:  green;
+}
