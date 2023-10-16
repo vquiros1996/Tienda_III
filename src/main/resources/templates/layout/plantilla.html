@@ -1,20 +1,97 @@
 
-<html xmlns-"http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org">
-      
-      <!-- indica que va a llamar todo como etiqueta de head -->
+<!-- xmlns=" se le indica la nomenclatura que usarems -->
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://thymeleaf.org">
+
+    <!-- head th:fragment="head" le estamos indicando que todo el gragmento de abajo 
+   lo llameremos mediante la etiqueta de head -->   
+
+
     <head th:fragment="head">
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
-        
-        <!--ENLACES LOCALES NAVEGACION ENTRE PAGS-->
-      <!-- <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
-      <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
-        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-        <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
-        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script> -->
+            <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+            <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
+            <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+            <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+            <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+
     </head>
     <body>
-        <div>TODO write content</div>
+        <!-- BLOQUE DE HEADER COMO DE MENU PRINCIPAL -->
+        <!-- header th:fragment="header" class="header", todo mi fragmento se llamara header -->
+        <header th:fragment="header" class="header">
+
+            <!-- bg-dark  es parte de clase bootstrap, para que vuelva negro el txt
+            el nav se utiliza para menus-->         
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark p-0">
+
+
+                <!-- Dentro del nav tenemos una clase container-->  
+                <div class="container">
+
+                    <!-- con una ancla >>> a th:href >> con una ruta con una clase navbar-brand
+                    la cual se encarga de hacer el txt un poco mas grande, resaltarlo como si fuera logo
+                    el [[#{aplicacion.titulo}]] es de tymeleaf para usar con codigo java
+                    busca aplicacion.titulo que es el Techsop -->  
+                    <a th:href="@{/}" class="navbar-brand">[[#{aplicacion.titulo}]]</a>
+
+                    <!-- boton para menu mas peque--> 
+                    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!--un div el cual contiene DOS listas--> 
+                    <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+
+                        <!--PRIMER lista , tiene anclas y list items que redirigen a cat, prod , usu--> 
+                        <ul class="navbar-nav">
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
+                            <li class="nav-item px-2"><a class="nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
+                        </ul>
+
+                        <!--SEGUNDA lista , nos muestra un drop down de color negro dropdown-menu-dark
+                        con dos opciones ES O EN setea las variables lagn ES/EN para que detecte si esta en esp o ingles--> 
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Lang</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item"  th:href="@{/(lang=es)}">ES</a></li>
+                                    <li><a class="dropdown-item" th:href="@{/(lang=en)}">EN</a></li>
+                                </ul>
+                            </li>
+                        </ul>                        
+                    </div>
+                </div>
+            </nav>
+
+            <!-- id="main-header" class="py-2 bg-success text-white", aplica un padding en el eje y, arriba y abajo de 2 
+            agrega todo el texto en color blanco text-white -->
+            <section id="main-header" class="py-2 bg-success text-white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h1><i class="fas fa-cog"></i> [[#{plantilla.suTienda}]]</h1>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </header> 
+
+        <!-- BLOQUE DE FOOTER COMO PARTE FINAL DE LA PAG -->
+   <!--fragmento de tipo footer con margen 5 padding general de 2 texto blanco que diga
+   plantilla.derechos , jalado directo de los default pack subidos de lenguaje--> 
+        <footer th:fragment="footer" class="bg-info text-white mt-5 p-2">
+            <div class="container">
+                <div class="col">
+                    <p class="lead text-center">
+                        &COPY [[#{plantilla.derechos}]]
+                    </p>
+                </div>
+            </div>
+        </footer>
+
     </body>
 </html>
