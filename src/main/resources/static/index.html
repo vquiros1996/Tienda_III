@@ -4,24 +4,91 @@
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Referencia del css de Estilos para el ASIDE-->
+        <link href="css/Estilos.css" rel="stylesheet" type="text/css"/>
+
+        <!-- Se arrastra la referencia de menu de mis css, menu.css-->  
+        <link href="css/menu.css" rel="stylesheet" type="text/css"/>
+
+
     </head>
     <body>
-        <h1 style = "text-align: center; color: violet;"> Home</h1>
-        
-        <p>Bienvenidos al curso de web y patrones</p>
-        
-        <p style="text-align: right;"> Lorem ipsum dolor sit amet consectetur adipiscing elit, orci tincidunt convallis rutrum vestibulum congue, sed dis diam facilisis sapien inceptos. Pulvinar sociosqu hendrerit viverra at nibh rhoncus, litora tellus phasellus euismod fames id cubilia, donec habitant faucibus vehicula fringilla. Semper venenatis primis arcu duis imperdiet magna auctor penatibus, scelerisque sagittis ac convallis vel aliquam neque. Integer ridiculus tincidunt ac scelerisque dictumst metus non egestas lacus, fames sagittis viverra aliquam magnis condimentum laoreet justo, quam commodo ultricies ultrices a luctus nulla cubilia.</p>
-        <p style="text-align: center;">Porttitor ultricies primis commodo varius class montes hendrerit lacus interdum, ac dui facilisis arcu libero venenatis eros tempor, mi mus torquent pharetra aliquam phasellus placerat rutrum. Facilisi risus lacinia ac sapien dui curabitur eleifend commodo sed rutrum, suspendisse pharetra venenatis nulla nisi varius dictumst tempus gravida, dapibus porttitor phasellus class ut hac tempor suscipit turpis. Eu parturient mi habitasse aliquet ac nisi euismod himenaeos dictum vehicula condimentum bibendum, posuere pellentesque arcu facilisi congue facilisis a nulla iaculis mauris. Pretium litora dis libero potenti sapien euismod montes, sociosqu malesuada curae natoque primis ultrices duis, neque enim inceptos scelerisque nulla mi.</p>
-        <p style="text-align: left;">Tempor natoque vel pulvinar aliquam tristique a interdum cursus, class aenean lectus pellentesque suscipit faucibus cras, mauris vehicula hendrerit venenatis ullamcorper fusce sodales. Turpis rutrum fusce duis risus primis faucibus sem, tempus metus nibh morbi molestie tristique volutpat, himenaeos etiam cubilia platea nostra dis. Curabitur nisi tempus lobortis per facilisis congue nibh sapien, accumsan vestibulum orci tellus interdum mus quam gravida dignissim, nam fames faucibus vivamus mauris fusce semper.</p>
-    
-        
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        
-        <p>Ulima Linea...</p>
-        
+
+        <!-- Bloque tipo header clase de forms-->  
+        <header class="header"> 
+
+            <!-- Etiqueta que indica al navegador que es un menu-->  
+            <nav class="nav"> 
+                <a href="index.html" class="logo nav-link" >TechShop </a>
+
+                <!-- Abrimos una UL , que son listas NO ordenadas-->  
+
+                <ul class = "nav-menu"> 
+
+                    <!-- Cada item de la lista me redirecciona a la pag deseada-->  
+                    <li class="nav-menu-item"> <a class="nav-menu-link nav-link" href="index.html">&LeftTriangleBar; </a> </li>
+                    <li class="nav-menu-item"> <a class="nav-menu-link nav-link" href="Ejemplo3.html">&RightTriangleBar; </a> </li>
+                    <li class="nav-menu- item"> <a class="nav-menu-link nav-link" href="audios.html">audios </a> </li>
+                    <li class="nav-menu- item"> <a class="nav-menu-link nav-link" href="videos.html">videos </a> </li>
+                    <li class="nav-menu- item"> <a class="nav-menu-link nav-link" href="iframes.html">iframes </a> </li>
+                    <li class="nav-menu- item"> <a class="nav-menu-link nav-link" href="formularios.html">formularios </a> </li>
+
+                </ul>
+            </nav>
+
+
+        </header>
+
+        <!-- Se agrega contenido y se le da el formato en el css estilos
+        al aside--> 
+
+        <aside id="barraLateral">
+
+            <h2> Contenido lateral</h2>
+            <br />
+            <p style="text-align: right;"> Lorem ipsum dolor sit amet 
+                consectetur adipiscing elit, orci tincidunt convallis rutrum
+                vestibulum congue, sed dis diam facilisis sapien inceptos. Pulvinar 
+                sociosqu hendrerit viverra at nibh rhoncus, litora tellus phasellus 
+                euismod fames id cubilia, donec habitant faucibus vehicula fringilla.
+                Semper venenatis primis arcu duis imperdiet magna auctor penatibus, 
+                scelerisque sagittis ac convallis vel aliquam neque. Integer ridiculus 
+                tincidunt ac scelerisque dictumst metus non egestas lacus, 
+                fames sagittis viverra aliquam magnis condimentum laoreet justo, 
+                quam commodo ultricies ultrices a luctus nulla cubilia.</p>
+        </aside>
+
+
+
+        <!-- Agregue un section para agregar todo el contenido-->  
+        <section id="contenido">
+
+            <h1 style = "text-align: center; color: violet;"> Home</h1>
+
+            <p>Bienvenidos al curso de web y patrones</p>
+
+            <p style="text-align: right;"> Lorem ipsum dolor sit amet consectetur adipiscing elit, orci tincidunt convallis rutrum vestibulum congue, sed dis diam facilisis sapien inceptos. Pulvinar sociosqu hendrerit viverra at nibh rhoncus, litora tellus phasellus euismod fames id cubilia, donec habitant faucibus vehicula fringilla. Semper venenatis primis arcu duis imperdiet magna auctor penatibus, scelerisque sagittis ac convallis vel aliquam neque. Integer ridiculus tincidunt ac scelerisque dictumst metus non egestas lacus, fames sagittis viverra aliquam magnis condimentum laoreet justo, quam commodo ultricies ultrices a luctus nulla cubilia.</p>
+            <p style="text-align: center;">Porttitor ultricies primis commodo varius class montes hendrerit lacus interdum, ac dui facilisis arcu libero venenatis eros tempor, mi mus torquent pharetra aliquam phasellus placerat rutrum. Facilisi risus lacinia ac sapien dui curabitur eleifend commodo sed rutrum, suspendisse pharetra venenatis nulla nisi varius dictumst tempus gravida, dapibus porttitor phasellus class ut hac tempor suscipit turpis. Eu parturient mi habitasse aliquet ac nisi euismod himenaeos dictum vehicula condimentum bibendum, posuere pellentesque arcu facilisi congue facilisis a nulla iaculis mauris. Pretium litora dis libero potenti sapien euismod montes, sociosqu malesuada curae natoque primis ultrices duis, neque enim inceptos scelerisque nulla mi.</p>
+            <p style="text-align: left;">Tempor natoque vel pulvinar aliquam tristique a interdum cursus, class aenean lectus pellentesque suscipit faucibus cras, mauris vehicula hendrerit venenatis ullamcorper fusce sodales. Turpis rutrum fusce duis risus primis faucibus sem, tempus metus nibh morbi molestie tristique volutpat, himenaeos etiam cubilia platea nostra dis. Curabitur nisi tempus lobortis per facilisis congue nibh sapien, accumsan vestibulum orci tellus interdum mus quam gravida dignissim, nam fames faucibus vivamus mauris fusce semper.</p>
+
+
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+
+            <p>Ulima Linea...</p>
+
+
+
+
+        </section>
+        <footer id="piePagina"> Derechos reservados &COPY; 2023 </footer>
+
+
+
+
     </body>
 </html>

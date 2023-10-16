@@ -1,26 +1,26 @@
-
-/* 
+/*
+ 
     Created on : Oct 3, 2023, 2:16:49 PM
     Author     : Vivian
-*/
 
-/* 
+
+ 
 Los selectores nos dicen a que elementos se van asignar
-*/
 
-/* 
+
+ 
 ESTE SE LE APLICO AL EJEMPLO 9
-*/
+
 #encabezado {
     color: blueviolet;
     font-weight: bold;
 }
 
 
-/* 
+ 
 ESTE SE LE APLICO AL EJEMPLO 7 EN LOS PARRAFOS
 SELECTOR DE CLASE
-*/
+
 .ParrafosCentrados
 {
 
@@ -34,4 +34,92 @@ SELECTOR DE CLASE
 .textoVerde
 {
     color:  green;
+}
+
+
+ 
+pseudo clases para color de anclas
+
+
+a:link {
+
+    background-color: green;
+    color:white;
+}
+
+a:visited{
+
+    background-color: violet;
+    color:white;
+}
+
+a:hover{
+
+    background-color: darkblue;
+    color:white;
+}
+
+a:active{
+
+    background-color: red;
+    color:white;
+}
+
+ 
+Estilo de selectores
+
+
+p:nth-child(odd) {
+
+    background-color: darksalmon;
+
+}
+
+p:nth-child(odd) {
+
+    background-color: blue;
+
+}*/
+
+/* 
+Estilo para el ASIDE en clase index
+*/
+
+#barraLateral {
+
+
+    position: absolute;
+    height: 81%;
+    top:12%;
+    left: 0;
+    width: 20%;
+    background: lightpink;
+    padding: 10px;
+}
+
+#contenido {
+
+    position: absolute;
+    height: 81%;
+    top:12%;
+    left: 20%;
+    width: 80%;
+    background: lightsteelblue;
+    padding: 10px;
+
+
+}
+
+#piePagina{
+    
+    position: absolute;
+    height: 7%;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: lightskyblue;
+    text-align: center;
+    padding-top: 25px;
+ 
+
 }

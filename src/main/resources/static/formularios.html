@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- CREAMOS UNA ETIQUETA DE TYPO SECTION  -->  
+
+        <section id = "contenido">
+
+            <!-- H2 PARA EL TITULO  -->  
+            <h2> Ejemplo de formularios y sus input </h2>
+
+            <article> 
+
+                <!-- FORMULARIOS -->  
+
+                <form action="#" method="GET"> 
+
+                    <!-- INPUT de tipo Boton -->  
+                    <label>  button </label> - <input type="button" name="confirmar" value="Confirmar"/> <br />
+
+                    <!-- INPUT de tipo CheckBox -->  
+                    <label>  checkbox </label> - <input type="checkbox" name="terminos" checked/> <br />
+
+                    <!-- INPUT de tipo color muestra colores disp --> 
+                    <label>  color </label> - <input type="color" name="fondo"/> <br />
+
+                    <!-- INPUT de tipo texto muestra cajita de texto --> 
+                    <label>  text </label> - <input type="text" name="nombre" placeholder="Digite el nombre"
+                                                    size="20"/> <br />
+
+                    <!-- TEXT AREA No es un tipo de input , tiene su propio tag --> 
+                    <label>  textarea </label> - <textarea name="direccion" rows="7" cols="50">Ejemplo de texto</textarea> <br />
+
+
+                    <!-- INPUT de tipo fecha , me permite seleccionar una fecha como calendar view--> 
+                    <!-- step="2" me permite solo seleccionar cada 2 dias--> 
+                    <label>  date </label> - <input type="date" name="date" min="2021-01-01" max="2023-12-31" step="2"/> <br />
+
+                    <!-- INPUT de tipo fecha --> 
+                    <label>  datetime-local </label> - <input type="datetime-local" name="datime-local"/> <br />
+
+                    <!-- INPUT de tipo fecha --> 
+                    <label>  time </label> - <input type="time" name="time"/> <br />
+
+                    <!-- INPUT DE EMAIL --> 
+                    <label>  email </label> - <input type="email" name="correo" placeholder="xxx@hotmail.com" /> <br />
+
+                    <!-- INPUT DE FILE permite cargar imagenes --> 
+                    <label>  file </label> - <input type="file" name="file" accept="image/png,image/jpeg" /> <br />
+
+                    <!-- INPUT DE HIDDEN , para campos ocultos 
+                     se usara mas adeltante para guardar codigo****--> 
+                    <label>  hidden </label> - <input type="hidden" id="hidden" value="iedjedjiedj" /> <br />
+
+                    <!-- INPUT DE SEARCH 
+                    --> 
+                    <label>  search </label> - <input type="search" placeholder=""/> <br />
+
+                    <!-- INPUT DE TEL 
+                    --> 
+                    <label>  tel </label> - <input type="tel" placeholder="" /> <br />
+
+                    <!-- INPUT DE URL
+                    --> 
+                    <label>  url </label> - <input type="url" placeholder="" /> <br />
+
+                    <!-- INPUT DE HIDDEN SEMANA
+                    --> 
+                    <label>  week </label> - <input type="week"/> <br />
+
+                    <!-- INPUT DE MES
+                    --> 
+                    <label>  month </label> - <input type="month"/> <br />
+
+                    <!-- INPUT DE NUMERO
+                    --> 
+                    <label>  number </label> - <input type="number"/> <br />
+
+                    <!-- INPUT DE PASSWORD --> 
+                    <label>  password </label> - <input type="password" name="pass"/> <br />
+
+                    <!-- INPUT DE RADIO se envia el numero 1 que va con java 
+                    Los radios si van uno con el otro , van agrupados se usan para seleccion UNICA--> 
+                    <label>  radio </label> - Java<input type="radio" name="lenguaje" value="1"/> <br />
+                    <label>  radio </label> - C#<input type="radio" name="lenguaje" value="2"/> <br />
+                    <label>  radio </label> - GO<input type="radio" name="lenguaje" value="3"/> <br />
+
+                    <!-- INPUT DE RANGO , nos permite seleccionar rangos 
+                     oninput="this.nextElementsSibling.value = this.value
+                    visualmente se conecta con la etiqueta de output de abajo donde el default esta en 24--> 
+                    <label>  range </label> - <input type="range" value="24" min="1" max="100"
+                                                     oninput="this.nextElementsSibling.value = this.value" /> <br />
+
+                     <!-- Etiqueta OUTPUT es para marcar elementos de salida del toggle de rango --> 
+                    <output>  24 </output> <br />
+                    
+                   <!-- INPUT DE RESET
+                   resetea todos los imput del formulario que se llenaron--> 
+                    <label>  reset </label> - <input type="reset" value="limpiar"/> <br />
+                    
+                       <!-- INPUT DE SUBMIT, boton de enviar
+                       envia toda la informacion ingresada en el formulario
+                       conectado mediante el metodo GET definido inicialmente en el form--> 
+                    <label>  submit </label> - <input type="submit" value="enviar"/> <br />
+
+                </form>
+
+
+
+            </article>
+
+        </section>
+
+        <!-- SALTO DE LINEA-->  
+        <br />
+
+        <footer> Derechos reservados &COPY; 2023 </footer>
+
+    </body>
+</html>

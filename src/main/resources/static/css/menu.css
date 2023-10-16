@@ -1,0 +1,115 @@
+/* 
+    Created on : Oct 15, 2023, 7:21:33 PM
+    Author     : Vivian
+*/
+/* 
+Usando el selector universal de * indicamos que todo va tener un margen de 0
+de la clase index donde se nombro
+*/
+
+* {
+    margin:0;
+    box-sizing: border-box;
+}
+
+/* 
+Acomoda el body de clase index
+*/
+body {
+
+    font-family: sans-serif;
+    padding: 45px 20px 0px;
+}
+
+/* 
+hacemos llamado a algunas clases exsistentes para modificarlas 
+como la clase header que ya existe en index
+*/
+
+.header {
+
+    background-color: lightgreen;
+    height: 12%;
+
+    /* 
+    Donde va iniciar ? , en el TOP desde la posicion mas arriba
+    */
+
+    top:0;
+    left: 0;
+    width: 100%;
+    position: fixed;
+}
+
+/* 
+trabajamlos clase NAV que es toda nuestra barra de menu
+*/
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 990px;
+
+    /* 
+centramos el div con margen 0 para que se centre
+    */
+    margin: 0 auto;
+
+}
+
+
+.nav-link {
+
+    color: lightcoral;
+    text-decoration: none;
+
+
+}
+
+
+.logo {
+
+    color:purple;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 40px;
+    line-height: 90px;
+
+}
+
+
+/* 
+nav-menu es solo la clase a nivel de la lista
+*/
+
+.nav-menu {
+display: flex;
+margin-right: 40px;
+list-style: none;
+}
+
+.nav-menu-item {
+    font-size: 18px;
+    /* margin >> para poder separar los LI uno del otro de la lista nav-menu-item, audio, video etc*/
+    margin: 0 18px;
+    line-height: 90px;
+    width: max-content;
+          
+}
+
+  /* modificamos la clase propia de las anclas de index que es el nav menu link*/
+  
+  .nav-menu-link {
+     padding: 8px 12px;
+     border-radius: 10px;
+     
+      
+      
+  }
+  
+  .nav-menu-link:hover {
+      
+      background-color:lightseagreen;
+      transition: 0.7s;
+      
+  }
