@@ -1,4 +1,3 @@
-
 <!-- xmlns=" se le indica la nomenclatura que usarems -->
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://thymeleaf.org">
@@ -8,6 +7,9 @@
     <body>
 
         <header th:replace="layout/plantilla :: header"/> 
+        <!-- fragmento llamado de fragmentosCategoria EDITAR -->
+        <section th:replace="categoria/fragmentosCategoria :: editarCategoria" />
+        
         
         <footer th:replace="layout/plantilla :: footer"/> 
 
