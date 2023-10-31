@@ -63,9 +63,6 @@ public class CategoriaController {
                             categoria.getIdCategoria()));
         }
         categoriaService.save(categoria);
-        //retidecrt a la opcion de listado , el metodo de inicio
-        //@GetMapping("/listado")//se accede por este /listado
-        //public String inicio(Model model) 
         return "redirect:/categoria/listado";
     }
 
