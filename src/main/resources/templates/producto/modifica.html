@@ -3,15 +3,14 @@
       xmlns:th="http://thymeleaf.org">
     <head th:replace="layout/plantilla :: head"> 
     </head>
-
+ 
     <body>
 
         <header th:replace="layout/plantilla :: header"/> 
-        <!-- fragmento llamado de fragmentosCategoria agregar,listado -->
-        <section th:replace="categoria/fragmentosCategoria :: botonesAgregar" />
-        <section th:replace="categoria/fragmentosCategoria :: agregarCategoria" />
-        <section th:replace="categoria/fragmentosCategoria :: listadoCategorias" />
-
+        <!-- fragmento llamado de fragmentosCategoria EDITAR -->
+        <section th:replace="producto/fragmentos :: editarProducto" />
+        
+        
         <footer th:replace="layout/plantilla :: footer"/> 
 
     </body>

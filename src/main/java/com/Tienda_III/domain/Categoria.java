@@ -9,9 +9,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import java.io.Serializable;
 import lombok.Data;
 import jakarta.persistence.Table;
+import java.util.List;
 
 /**
  *
@@ -36,6 +39,12 @@ private static final long serialVersionUID = 1L;
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
+
+    
+    
+    @OneToMany
+    @JoinColumn(name = "id_categoria", insertable = false, updatable = false)
+    List<Producto> productos;
 
     //consructor vacio sin nada en base
     public Categoria() {
