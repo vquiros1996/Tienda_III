@@ -16,10 +16,7 @@ import java.util.List;
 //vamos a tener metodos de salvar/ eliminar/ buscar categorias
 //como un "CRUD"
 public interface CategoriaService {
-    
-    
-    
-    
+
     //valor de retorno una lista de categoria
     //un solo objeto singular, categorias para el objeto
     //parametro a recibir un booleano de activos , ya sea para traer tdas
@@ -30,14 +27,14 @@ public interface CategoriaService {
 
     //RETORNA UNA CATEGORIA POR ID
     public Categoria getCategoria(Categoria categoria);
-    
-    
+
     //SE INSERTA UN NUEVO REGISTRO SI EL ID DE LA CATEGORIA ESTA VACIO
     //SE ACTUALIZA EL REGISTRO SI EL ID DE LA CATEGORIA NO ESTA VACIO
     public void save(Categoria categoria);
-    
-    
-    
+
     public void delete(Categoria categoria);
+
+    //metodo para buscar, filtrar
+    public List<Categoria> getCategoriasPorDescripcion(String descripcion);
 
 }

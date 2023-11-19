@@ -62,4 +62,12 @@ public class CategoriaServiceImpl implements CategoriaService {
         categoriaDao.delete(categoria);
     }
 
+
+    //metodo para buscar, filtrar
+    @Override
+    @Transactional(readOnly = true)
+    public List<Categoria> getCategoriasPorDescripcion(String descripcion) {
+        return categoriaDao.findByDescripcionContainingIgnoreCase(descripcion);
+    }
+
 }

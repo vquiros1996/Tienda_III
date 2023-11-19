@@ -32,7 +32,8 @@ public class CategoriaController {
     @GetMapping("/listado")//se accede por este /listado
     public String inicio(Model model) {
 
-        List<Categoria> listadoCategorias = categoriaService.getCategorias(false); //falso para que me muestr tds las ctag
+       // List<Categoria> listadoCategorias = categoriaService.getCategorias(false); //falso para que me muestr tds las ctag
+         List<Categoria> listadoCategorias = categoriaService.getCategoriasPorDescripcion("pad");
         //con el objeto model usarlo como transporte entre controlador y la vista
         //  model.addAttribute(attributeName, categoriaService) USAR ESTE
         model.addAttribute("categorias", listadoCategorias); //utilizo el segundo el que tiene dos valores String atriute name y object
