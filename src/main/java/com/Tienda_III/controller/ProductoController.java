@@ -86,6 +86,28 @@ public class ProductoController {
         return "/producto/modifica";
     }
     
+    
+    //Los métodos siguientes son para la prueba de consultas ampliadas
+    @GetMapping("/listado2")
+    public String listado2(Model model) {
+        var productos = productoService.getProductos(false);
+        model.addAttribute("productos", productos);
+        return "/pruebas/listado2";
+    }
+
+    @PostMapping("/query1")
+    public String consultaQuery1(@RequestParam(value = "precioInf") double precioInf,
+            @RequestParam(value = "precioSup") double precioSup, Model model) {
+        var productos = productoService.findByPrecioBetweenOrderByDescripcion(precioInf, precioSup);
+        model.addAttribute("productos", productos);
+        model.addAttribute("precioInf", precioInf);
+        model.addAttribute("precioSup", precioSup);
+        return "/consulta/listado";
+    }
+    
+    
+    
+    
     ///mediante el friltro de JPQL selects
     @PostMapping("/query2")
     public String consultaQuery2(@RequestParam(value = "precioInf") double precioInf,
