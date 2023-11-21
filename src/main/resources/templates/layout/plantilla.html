@@ -2,7 +2,8 @@
 <!-- xmlns=" se le indica la nomenclatura que usarems -->
 
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://thymeleaf.org">
+      xmlns:th="http://thymeleaf.org"
+      xmlns:sec="http://thymeleaf.org/thymeleaf-extras-springsecurity6">
 
     <!-- head th:fragment="head" le estamos indicando que todo el gragmento de abajo 
    lo llameremos mediante la etiqueta de head -->   
@@ -47,14 +48,14 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
 
                         <!--PRIMER lista , tiene anclas y list items que redirigen a cat, prod , usu--> 
-                        <ul class="navbar-nav">
+                        <ul class="navbar-nav" sec:authorize="hasRole('ROLE_ADMIN') or hasRole('ROLE_VENDEDOR')">
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/categoria/listado}">[[#{plantilla.categorias}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/producto/listado}">[[#{plantilla.productos}]]</a></li>
                             <li class="nav-item px-2"><a class="nav-link" th:href="@{/usuario/listado}">[[#{plantilla.usuarios}]]</a></li>
-                            
-                             <!--Me agrega dropdown con nuevas opciones en el menu--> 
-                             <!--Ancla llamada prueba en el menu que me despliega opciones--> 
-                             <li class="nav-item dropdown">
+
+                            <!--Me agrega dropdown con nuevas opciones en el menu--> 
+                            <!--Ancla llamada prueba en el menu que me despliega opciones--> 
+                            <li class="nav-item dropdown" sec:authorize="hasRole('ROLE_ADMIN')">
                                 <a class="nav-link dropdown-toggle" 
                                    data-bs-toggle="dropdown" 
                                    href="#" 
@@ -66,13 +67,13 @@
                                     </li>
                                     <li><a class="dropdown-item"  th:href="@{/pruebas/listado2}">[[#{plantilla.consultas}]]</a>
                                     </li>
-                               
+
                                 </ul>
-                                 
+
                             </li>
-                            
-                            
-                            
+
+
+
                         </ul>
 
                         <!--SEGUNDA lista , nos muestra un drop down de color negro dropdown-menu-dark
@@ -85,7 +86,37 @@
                                     <li><a class="dropdown-item" th:href="@{/(lang=en)}">EN</a></li>
                                 </ul>
                             </li>
-                        </ul>                        
+                        </ul> 
+
+                        <ul class="navbar-nav" sec:authorize="!isAuthenticated()">
+                            <li class="nav-item">
+                                <a th:href="@{/login}" class="nav-link">
+                                    <i class="fa fa-sign-in-alt"> </i>
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+                        <ul class="navbar-nav" sec:authorize="isAuthenticated()">
+                            <li class="nav-item text-white my-auto" th:if="${#ctx.session. usuarioImagen != null}">
+                                <img th:src="${#ctx. session. usuarioImagen}" height="40"/>
+                                <li class="nav-item text-white my-auto">
+                                    <i class="fa fa-user mx-1"> </i><span sec:authentication="name">Username</span>
+                                </li>
+                                <li class="nav-item text-white my-auto">
+                                    <i class="fa fa-users mx-1"> </i><span sec:authentication="principal.authorities">Roles</span>
+                                </li>
+                                <li class="nav-item text-white my-auto">
+                                    <form method="POST" th:action="@{/logout}">
+                                        <button class="btn btn-dark"> 
+                                            <i class="fa fa-sign-out-alt">
+                                            </i>
+                                        </button>
+                                    </form>
+                                </li>
+                        </ul>
+
                     </div>
                 </div>
             </nav>
@@ -104,8 +135,8 @@
         </header> 
 
         <!-- BLOQUE DE FOOTER COMO PARTE FINAL DE LA PAG -->
-   <!--fragmento de tipo footer con margen 5 padding general de 2 texto blanco que diga
-   plantilla.derechos , jalado directo de los default pack subidos de lenguaje--> 
+        <!--fragmento de tipo footer con margen 5 padding general de 2 texto blanco que diga
+        plantilla.derechos , jalado directo de los default pack subidos de lenguaje--> 
         <footer th:fragment="footer" class="bg-info text-white mt-5 p-2">
             <div class="container">
                 <div class="col">
