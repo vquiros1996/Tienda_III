@@ -118,7 +118,7 @@ public class ProjectConfig implements WebMvcConfigurer {
         http.authorizeHttpRequests((request) -> request
                 .requestMatchers("/", "/index", "/errores/**", "/error", "/error/***",
                         "/carrito/**", "/pruebas/**", "/reportes/**",
-                        "/registro/**", "/js/**", "/webjars/**")
+                        "/registro/**", "/js/**", "/webjars/**","/refrescarBoton")
                 .permitAll()//todo lo anterior se le permite a todos es decir usuarios autenticados y los que no
                 .requestMatchers(//Matchear rutas
                         "/producto/nuevo", "/producto/guardar",
